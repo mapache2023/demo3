@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" prefHeight="403.0" prefWidth="933.0" style="-fx-background-color: cyan;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.Controller">
+   <children>
+      <Label layoutX="34.0" layoutY="169.0" text="bienvenido" textFill="#cfd359">
+         <font>
+            <Font name="Comic Sans MS" size="37.0" />
+         </font>
+      </Label>
+      <HBox layoutX="21.0" layoutY="276.0" prefHeight="103.0" prefWidth="208.0">
+         <children>
+            <VBox prefHeight="56.0" prefWidth="100.0">
+               <children>
+                  <Label text="nombre" />
+                  <Label prefHeight="35.0" prefWidth="17.0" text="dia" />
+                  <Label text="hora" />
+               </children>
+            </VBox>
+            <VBox prefHeight="83.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="nombreField" />
+                  <ChoiceBox fx:id="choiceDia" prefWidth="150.0" />
+                  <ChoiceBox fx:id="choiceHora" prefWidth="150.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <ImageView fitHeight="131.0" fitWidth="107.0" layoutX="72.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img.png" />
+         </image>
+      </ImageView>
+      <GridPane fx:id="hor_gr" gridLinesVisible="true" layoutX="319.0" layoutY="41.0" prefHeight="354.0" prefWidth="607.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="52.0" minHeight="0.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <HBox layoutX="282.0" layoutY="21.0" prefHeight="26.0" prefWidth="651.0">
+         <children>
+            <Separator prefHeight="13.0" prefWidth="56.0" visible="false" />
+            <Label text="LUNES" />
+            <Separator prefHeight="3.0" prefWidth="86.0" visible="false" />
+            <Label text="MARTES" />
+            <Separator prefHeight="6.0" prefWidth="83.0" />
+            <Label prefHeight="17.0" prefWidth="71.0" text="MIERCOLES" />
+            <Separator prefHeight="7.0" prefWidth="53.0" />
+            <Label text="JUEVES" />
+            <Label />
+            <Separator prefHeight="9.0" prefWidth="83.0" />
+            <Label prefHeight="17.0" prefWidth="82.0" text="VIERNES" />
+         </children>
+      </HBox>
+      <VBox layoutX="267.0" layoutY="47.0" prefHeight="427.0" prefWidth="56.0">
+         <children>
+            <Label text="7-8 hrs" />
+            <Separator orientation="VERTICAL" prefHeight="36.0" prefWidth="6.0" />
+            <Label prefWidth="52.0" text="9-10 hrs" />
+            <Separator orientation="VERTICAL" prefHeight="37.0" prefWidth="14.0" />
+            <Label text="11-12 hrs" />
+            <Separator orientation="VERTICAL" prefHeight="35.0" prefWidth="2.0" />
+            <Label text="13-14 hrs" />
+            <Separator orientation="VERTICAL" prefHeight="42.0" prefWidth="12.0" />
+            <Label text="15-16 hrs" />
+            <Separator orientation="VERTICAL" prefHeight="31.0" prefWidth="25.0" />
+            <Label text="17-18 hrs" />
+            <Separator orientation="VERTICAL" prefHeight="34.0" prefWidth="9.0" />
+            <Label text="19-20 hrs" />
+         </children>
+      </VBox>
+      <Button fx:id="agregaB" layoutX="14.0" layoutY="409.0" mnemonicParsing="false" onAction="#agregar" text="agregar" />
+      <Button fx:id="abreIntefazs" layoutX="92.0" layoutY="409.0" mnemonicParsing="false" onAction="#abre_consultor_db" text="consultar la base de datos" />
+      <Label fx:id="confirmacionLabel" layoutX="312.0" layoutY="152.0" text=" " />
+   </children>
+</AnchorPane>
